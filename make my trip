@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyTrip Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #003580;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .search {
+            text-align: center;
+            margin: 20px;
+        }
+        .search input, .search button {
+            margin: 10px;
+            padding: 10px;
+        }
+        .deals, .destinations {
+            text-align: center;
+            margin: 20px;
+        }
+        .deal-card, .destination {
+            display: inline-block;
+            background: #f0f0f0;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .flight-info {
+            display: none;
+            text-align: center;
+            margin: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            background: #003580;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MakeMyTrip</div>
+            <ul class="nav-links">
+                <li><a href="#">Flights</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Trains</a></li>
+                <li><a href="#">Buses</a></li>
+                <li><a href="#">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="search">
+        <h2>Book Your Travel</h2>
+        <input type="text" id="from" placeholder="From">
+        <input type="text" id="to" placeholder="To">
+        <input type="date" id="date">
+        <button onclick="searchFlights()">Search</button>
+    </section>
+    
+    <section class="flight-info" id="flight-info">
+        <h2>Available Flights</h2>
+        <p><strong>Flight:</strong> MMT101 | <strong>Departure:</strong> 10:00 AM</p>
+        <p><strong>Flight:</strong> MMT202 | <strong>Departure:</strong> 2:30 PM</p>
+        <p><strong>Flight:</strong> MMT303 | <strong>Departure:</strong> 6:45 PM</p>
+    </section>
+    
+    <section class="deals">
+        <h2>Exclusive Deals</h2>
+        <div class="deal-card">Special Offer 1</div>
+        <div class="deal-card">Special Offer 2</div>
+    </section>
+    
+    <section class="destinations">
+        <h2>Trending Destinations</h2>
+        <div class="destination">Goa</div>
+        <div class="destination">Manali</div>
+        <div class="destination">Mumbai</div>
+        <div class="destination">Delhi</div>
+        <div class="destination">Bangalore</div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 MakeMyTrip Clone. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function searchFlights() {
+            document.getElementById("flight-info").style.display = "block";
+        }
+    </script>
+</body>
+</html>
